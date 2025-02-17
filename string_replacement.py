@@ -25,7 +25,7 @@ def replace_strings(article, replacements_dict):
 df1['Updated_Articles'] = df1['Articles'].apply(lambda x: replace_strings(str(x), replacements))
 
 # Save the modified articles back to a new Excel file
-output_file = 'updated_articles.xlsx'
+output_file = 'data/updated_articles.xlsx'
 df1.to_excel(output_file, index=False)
 
 print(f"String replacement complete! Output saved to '{output_file}'.")
